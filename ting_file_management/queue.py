@@ -1,18 +1,26 @@
 from ting_file_management.abstract_queue import AbstractQueue
 
+from collections import deque
+
 
 class Queue(AbstractQueue):
     def __init__(self):
-        """Inicialize sua estrutura i"""
+        self._data = deque()
 
     def __len__(self):
-        """Aqui irá sua implementação"""
+        return len(self._data)
 
     def enqueue(self, value):
-        """Aqui irá sua implementação"""
+        self._data.append(value)
 
     def dequeue(self):
-        """Aqui irá sua implementação"""
+        self._data.popleft()
 
     def search(self, index):
-        """Aqui irá sua implementação"""
+        element = self._data[index]
+        if element is None:
+            raise ("Índice Inválido ou Inexistente")
+        try:
+            return element
+        except IndexError as e:
+            print(str(e))
