@@ -17,7 +17,6 @@ class Queue(AbstractQueue):
         return self._data.popleft()
 
     def search(self, index):
-        try:
-            return self._data[index]
-        except IndexError:
+        if index < 0 or index >= len(self._data):
             raise IndexError("Índice Inválido ou Inexistente")
+        return self._data[index]
