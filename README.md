@@ -9,3 +9,8 @@ Funcionalidades
 - Verificar a existência de uma palavra em todos os arquivos processados
 - Buscar uma palavra em todos os arquivos processados
 
+Instalação
+
+1. Clone o repositório: git clone https://github.com/welitonlimaa/queue-fifo.git
+2. Acesse o diretório do projeto: cd queue-fifo
+3. Execute o programa: python main.py
